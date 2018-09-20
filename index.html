@@ -18,9 +18,9 @@
             height: 100%;
           }
 
-          .bg {
+          #bg {
             /* The image used */
-            background-image: url("bg.jpg");
+            background-image: url("bg3.jpg");
 
             /* Full height */
             height: 100%;
@@ -50,13 +50,19 @@
     </head>
 
     <body>
-      <div class="bg">
+      <div id="bg">
         <div class="hi_there">
           <div class="text_box">
             <p>Send me an <a href="mailto:e@ericlortie.com">email</a>.</p>
           </div>
         </div>
       </div>
+      <script type="text/javascript">
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        document.getElementById('bg').style.backgroundImage="url(bg"+getRandomInt(1, 4)+".jpg)"; // specify the image path here
+      </script>
     </body>
 
 </html>
